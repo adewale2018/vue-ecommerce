@@ -1,25 +1,25 @@
 <template>
   <nav class="navbar navbar-expand navbar-dark bg-dark">
     <div class="container">
-    <div class="nav navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home</a>
-      <a class="nav-item nav-link" href="#">Products</a>
-    </div>
-    <div>
-      <div class="btn-group">
-        <button
-          class="btn btn-secondary dropdown-toggle"
-          type="button"
-          id="triggerId"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >0 Cart</button>
-        <div>
-          <mini-cart />
+      <div class="nav navbar-nav">
+        <router-link to='/' class="nav-item nav-link active">Home</router-link>
+        <router-link to='/product/30' class="nav-item nav-link active">Product</router-link>
+      </div>
+      <div>
+        <div class="btn-group">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="triggerId"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >0 Cart</button>
+          <div @click="$event.stopPropagation()">
+            <mini-cart />
+          </div>
         </div>
       </div>
-    </div>
     </div>
   </nav>
 </template>
